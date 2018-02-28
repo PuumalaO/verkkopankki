@@ -7,22 +7,6 @@ class Pankki_model extends CI_Model {
                $this->load->database();
           }
 
-          public function get_alldata()
-          {
-               $this->db->select('tilioikeudet.idasiakas');
-               $this->db->from('tilioikeudet');
-               $this->db->join('asiakas','tilioikeudet.idasiakas=asiakas.idasiakas','left');
-               $this->db->select('tilioikeudet.idtili');
-               $this->db->from('tilioikeudet');
-               $this->db->join('tili','tilioikeudet.idtili=tili.idtili','left');
-               $this->db->select('tilioikeudet.idtili');
-               $this->db->from('tilioikeudet');
-               $this->db->join('kortti','tilioikeudet.idtili=kortti.idtili','left');
-               $tuloste = $this->db->get()->result_array();
-               return $this->db->get()->result_array();
-
-          }
-
           public function get_asiakastieto($idasiakas = FALSE)
           {
                if($idasiakas === FALSE)
@@ -136,7 +120,7 @@ class Pankki_model extends CI_Model {
                }
 
                elseif ($check >= 1)
-               {   
+               {
 		    $this->db->trans_complete();
                     $data  = 'Rahojen siirto onnistui';
                     return $data;
@@ -146,7 +130,7 @@ class Pankki_model extends CI_Model {
 			$this->db->trans_rollback();
                     $data = "Jokin meni pieleen. Yritä suorittaa siirto uudelleen.";
                     return $data;
-	
+
 		}
 
 

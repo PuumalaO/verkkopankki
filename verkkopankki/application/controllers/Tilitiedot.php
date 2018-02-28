@@ -37,16 +37,7 @@ class Tilitiedot extends CI_Controller{
                $this->load->view('templates/footer');
           }
 
-          public function kaikkitieto()
-          {
-               $data['asiakasdata'] = $this->Pankki_model->get_alldata();
-               $data['title'] = 'Kaikki tiedot';
-               printr('asiakasdata');
-
-               $this->load->view('templates/header', $data);
-               $this->load->view('tili/nayta_asiakas', $data);
-               $this->load->view('templates/footer');
-}
+          
           public function tilitieto()
           {
                $data['tilidata'] = $this->Pankki_model->get_tilitieto();
@@ -169,7 +160,7 @@ class Tilitiedot extends CI_Controller{
                     $this->load->view('templates/content', $data);
 
                }
-		
+
 
                else {
 
