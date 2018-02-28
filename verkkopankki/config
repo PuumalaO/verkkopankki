@@ -1,0 +1,13 @@
+[core]
+	bare = false
+	repositoryformatversion = 0
+	filemode = false
+	symlinks = false
+	ignorecase = true
+	logallrefupdates = true
+[remote "verkkopankki"]
+	url = https://github.com/PuumalaO/verkkopankki
+	fetch = +refs/heads/*:refs/remotes/verkkopankki/*
+[branch "master"]
+	remote = verkkopankki
+	merge = refs/heads/master
