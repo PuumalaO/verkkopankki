@@ -12,7 +12,7 @@ Sadly no. The database has been wiped and the website isn't hosted anymore.
 
 ## Technologies used
 
-- PHP (Codeigniter)
+- PHP (CodeIgniter)
 - MySQL
 - Bootstrap
 
