@@ -1,6 +1,6 @@
 # Verkkopankki
 
-### My first ever web project ever with PHP using CodeIgniter and MySQL
+### My first ever web project with PHP using CodeIgniter and MySQL
 
 ## What is it?
 
